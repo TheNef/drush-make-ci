@@ -1,4 +1,4 @@
-language: php
+anguage: php
 
 php:
   - 5.3
@@ -7,16 +7,16 @@ php:
 env:
   global:
     # Your Pantheon site's UUID (e.g. from your dashboard URL)
-    - PUUID='7b67ea8d-0c67-41ec-9358-147b74181022'
+    - PUUID='77d7978b-4858-472c-8a83-10bb57da3b54'
 
     # Your Pantheon site's name.
-    - PNAME='drush-make-example'
+    - PNAME='bt48-ci-test2'
 
     # The Pantheon environment to test against.
     - PENV='dev'
 
     # The user you interact with Pantheon as
-    - PEMAIL='josh+travis@getpantheon.com'
+    - PEMAIL='kevin@bt48.com'
 
     # A random password for the Drupal site install.
     - RANDPASS=$(cat /dev/urandom | env LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1 )
@@ -33,7 +33,7 @@ env:
     #
     # travis encrypt PEMAIL='test@example.com'
     #
-    - secure: "HHaqURVDTl38qKhnq6Q8DPz0yJ+Qo7SHMTm1lZNZrZDHZuLb4kfGtA+gBuURKSaERIb8cBTXzduame+2FasHTM47K0BeKIEflJblR2cCr8n15iR1SaGJ11X86a17I1Wo+Iq+sHO3W1mQbNUyfDBbcqQtzMbWCWybdic08gGpYhM="
+    - secure: "L0JgSMy7FOSdmlWtTJ5ikcbYELWsRpGRjsJGekFxLGdEo9FgytK6PT6FcFv+XH28+aoSSzie+/MaLGwCFiktdk7TwgziSwUkpbvGVufO8avk1Q6oeIQwxtx9i/qXiaOmtbLvbzQG/qxWC4CRsNNi+45aKSkkKTL4XSEIwYfA591WwGh9d+ngiNtjLE/qLeOeQVYotVWTBR1zNNZV2ONOe/1W12a1LyDjHB41BMvZ1bKri3uu6cXfIj5gRuYoYaOxvFWK45ooWmNKZg2GCANObta2Qf+gsdDjIE0RCWDt9jO9ThAtE7fGPPdZIf1xZtOJPfxC7lT5BAbYcgA9JLQ54TZSdjkLAdZmUFWViJDrhPkc07k1npE+X25ve7Nv9n35d3pnrppnXh4lj/wwMje0tqSuG9L94qxz0gK6Xm7AFtHXeBr25dOVn0rgNKb050BGfC8m2DOUA+Rxor16wMi/tWDjQ5xBJ57ZLc3Cz1PHihMjahTkoI5iM3ArT3vrn3R//cRmSHqdzCGmEX+U91fSNC50xt3FnqO6J4hrYhaHwbPUzPXyRowroDNMFItmqRxupgIsnpeJuAIfGuuJeELJGKR2jHgEKOSN+ve7DWjR8CJETk6/6Trtn6AvIGI7nHkc8u71MnzPN9tpvreuA07+eQwK7RPh5/R1Q3362wCTX50="
 
     #
     # PPASS environment variable: represents the Pantheon account password for
@@ -41,7 +41,7 @@ env:
     #
     # travis encrypt PPASS='my_account_password'
     #
-    - secure: "HpD62aklXeVIbL4Xk1YpFbPSdG2YmySjJzs9fOKn+uwl1lQo9sstaAZ+UwWaiKg2O1DNs1/T4q8c64fTWz/l843uEnWTbZHtFkNsLK8s+WmCG2ehxNFa0r8tCdEL18dnnsAR+WidPmFuvXeXY2Eg1ieOC/XCmRBlTHNMhLKDqGI="
+    - secure: "gCjMcFZ22oyqeUdBamD/RLBXdWMBTyzrXlugB4lHa2ddYVYPiy3JxLXn/SfIZIYKTCNmo7zKaX9TH2aLBC/CIADUYikp42ewJZc864sOpmD002RUjS55IQJ6hEX+zuvInEZyA4R5U5A9ii45n2A9578y/LTLAI225EfyvccjgZcYVYMSB1lA9QK6cII34oBJh2C/CGi8dUSNdZaCszE0+lwBA6AChBN5GKxNRENm7LQm3YE2tlaVeJrSmqaBAXKSZwPjMmnONcJWggBlj9rD56ql93uoYj0mE178oDpiQY5EZPJcEB4vWcdQ6LDb8bFxCrv38ROVlnDpwRvE/Q/pKaCa6Hp6uBUaJ8j5KOxccIj6aJ525O6kvxeXoQQN+1h9bQjQ5zyvVHj56QTUBFWskPBNfwjcBnfoInT6wPZKvzFVc/v2Qlg0u70ADd73PSc3PDmivAidZgi4j3Al/9rtffPLu4o4wGndZL00SObJcx2HlYSEsmEyEKqBgFqhdtXzsOvzbsfCKPk84phqZ36+UNkw8Rw15ckZ/AAxi+5AUD5VfgOR9XlbVQwQ0dOIgn4MIUz9Ku1qZT887Y82yWVQuadJLckmdRUTuG0GoM7QLnwYyTysjfXSBcaH2voZr8JcmTXJhp7KnGo4dxb9pzodkF3NjqAhbBvnoL0UeCJyf6E="
 
 before_install:
     # Place a passphrase-free ssh key so that you can clone and push to your
@@ -51,7 +51,7 @@ before_install:
     #
     # See: http://docs.travis-ci.com/user/encrypting-files/
     #
-    - openssl aes-256-cbc -K $encrypted_dfede703c127_key -iv $encrypted_dfede703c127_iv -in travis_rsa.enc -out ~/.ssh/id_rsa -d
+    - openssl aes-256-cbc -K $encrypted_dfede703c127_key -iv $encrypted_dfede703c127_iv -in travis-ci-key.pub.enc -out ~/.ssh/id_rsa -d
     - chmod 0600 ~/.ssh/id_rsa
 
 install:
@@ -75,6 +75,6 @@ after_failure:
 notifications:
   email:
     recipients:
-      # - panopoly-ci@googlegroups.com
+      # - kevin@bt48.com
     on_success: always
     on_failure: always
