@@ -7,10 +7,10 @@ php:
 env:
   global:
     # Your Pantheon site's UUID (e.g. from your dashboard URL)
-    - PUUID='77d7978b-4858-472c-8a83-10bb57da3b54'
+    - PUUID='5d6c3b52-b516-46a2-870b-a6c9f0313c16'
 
     # Your Pantheon site's name.
-    - PNAME='bt48-ci-test2'
+    - PNAME='travis-test'
 
     # The Pantheon environment to test against.
     - PENV='dev'
